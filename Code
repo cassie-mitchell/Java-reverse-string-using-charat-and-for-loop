@@ -1,0 +1,17 @@
+import java.util.*;//import this so we can use scanner class
+class ReverseString//class name
+{
+  public static void main(String args[])//main method declaration
+  {
+    String original, reverse = "";//declare two empty strings
+    Scanner in = new Scanner(System.in);//create a scanner
+
+    System.out.println("Enter a string to reverse");//print instructions to console
+    original = in.nextLine();//read input and save into a string
+
+    for (int i = original.length() - 1 ; i >= 0 ; i--)//loop through the whole string backwards, character by character
+      reverse = reverse + original.charAt(i);//make a new string by attaching the current character you are reading to the prevous character/s you just read
+
+    System.out.println("Reverse of the string: " + reverse);//print result to screen
+  }
+}
